@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=".../public/stylesheets/style.css">
+    <title>Registration</title>
+</head>
+<body>
+
+    <div id="form">
+  <h2>Signup</h2>
+  <form action="/signup" method="POST">
+ 
+    <label>
+       Choose an option:
+       <select id="user-type" name="user-type">
+        <option value="artist">Artist</option>
+        <option value="art-space">Art Space</option>
+        <option value="visitor">Visitor</option>
+       </select> 
+    </label>
+
+    <label> Username
+      <input type="text" name="username" placeholder="username" />
+    </label>
+ 
+    <label> Email
+      <input type="email" name="email" placeholder="email@address.com" />
+    </label>
+ 
+    <label> Password
+      <input type="password" name="password" placeholder="********" />
+    </label>
+ 
+    <button type="submit">Create account</button>
+ 
+  </form>
+</div>
+</body>
+</html>
