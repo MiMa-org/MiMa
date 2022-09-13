@@ -1,6 +1,5 @@
 body {
-  padding: 50px;
-  font: 14px 'Lucida Grande', Helvetica, Arial, sans-serif;
+  font: 14px Arial, Helvetica, sans-serif;
 }
  
 a {
@@ -63,14 +62,13 @@ form button:hover {
 }
  
 ul {
-  border-bottom: 2px solid #43a3e6;
-  height: 30px;
-  padding: 1em 0;
+  height: 12px;
+  padding: 2px 0;
   list-style-type: none;
 }
  
 ul li {
-  line-height: 20px;
+  line-height: 12px;
 }
  
 #to-right {
@@ -95,7 +93,7 @@ ul li {
 #to-left p a {
   color: #000;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 12px;
 }
  
 #logout-form {
@@ -104,4 +102,21 @@ ul li {
  
 #logout-form button {
   width: 120px;
+}
+
+.section1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1628819324029-f02ffd520907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3174&q=80);
+  background-size: cover;
+  background-position: center;
+  filter: brightness();
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.title {
+  font-size: 90px;
 }
