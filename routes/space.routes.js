@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
- 
 const Space = require('../models/Space.model');
-
 const fileUploader = require('../config/cloudinary.config');
 
 // GET route to display the form to create a new space
