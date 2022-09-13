@@ -16,15 +16,41 @@ router.get('/spaces', (req, res) => {
       .catch(err => console.log(`Error while getting the spaces from the DB: ${err}`));
   });
 
+  // GET route for editing a space
+  router.get('/spaces/:id/edit', (req, res) => {
+    const { id } = req.params;
+   
+    Space.findById(id)
+      .then(spaceToEdit => res.render('space-edit', spaceToEdit))
+      .catch(error => console.log(`Error while getting a single space for edit: ${error}`));
+  });
+
 // POST
 router.post('/spaces/create', fileUploader.single('space-image'), (req, res) => {
-    const { name, description } = req.body;
+    const { name, address, description, website, topic, medium, offer } = req.body;
    
-    Space.create({ name, description, imageUrl: req.file.path })
+    Space.create({ name, address, description, website, topic, medium, offer, imageUrl: req.file.path })
       .then(newlyCreatedSpaceFromDB => {
         res.redirect('/spaces');
       })
       .catch(error => console.log(`Error while creating a new space: ${error}`));
+  });
+
+// POST route to save changes after updates in a specific space
+router.post('/spaces/:id/edit', fileUploader.single('space-image'), (req, res) => {
+    const { id } = req.params;
+    const { name, address, description, website, topic, medium, offer, existingImage } = req.body;
+   
+    let imageUrl;
+    if (req.file) {
+      imageUrl = req.file.path;
+    } else {
+      imageUrl = existingImage;
+    }
+   
+    Space.findByIdAndUpdate(id, { name, address, description, website, topic, medium, offer, imageUrl }, { new: true })
+      .then(() => res.redirect(`/spaces`))
+      .catch(error => console.log(`Error while updating a single space: ${error}`));
   });
    
 
