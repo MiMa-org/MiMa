@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Update your space</title>
+</head>
+<body>
+    
+<h2>Update your space</h2>
+<div class="row">
+  <div class="col-md-6">
+    <form action="/spaces/{{_id}}/edit" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label>Name:
+          <input type="text" name="name" class="form-control" value="{{name}}" />
+        </label>
+      </div>
+ 
+      <div class="form-group">
+        <label>Description:
+          <textarea name="description" cols="30" rows="4" class="form-control">{{description}}
+          </textarea>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>Website:
+          <input type="text" name="website" class="form-control" value="{{website}}" />
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>I prefer to collaborate with artists working on the following topics:
+          <textarea name="topic" cols="30" rows="4" class="form-control">{{topic}}</textarea>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>I prefer to collaborate with artists working with the following medium:
+          <textarea name="medium" cols="30" rows="4" class="form-control">{{medium}}</textarea>
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label>I offer solo or group shows:
+          <input type="text" name="offer" class="form-control" value="{{offer}}" />
+        </label>
+      </div>
+ 
+      <div class="form-group">
+        <label>Image:
+          <input type="file" name="space-image" class="form-control-file" />
+          <input type="text" name="existingImage" hidden value="{{imageUrl}}">
+        </label>
+      </div>
+ 
+      <button type="submit" class="btn btn-success">Save changes</button>
+ 
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

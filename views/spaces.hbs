@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Art spaces</title>
+</head>
+<body>
+    
+<h1>All the art spaces</h1>
+<hr>
+<div class="row">
+  {{#each spaces}}
+    <div class="col-md-4 mb-5">
+      <div class="card" style="width: 18rem;">
+        <img src="{{imageUrl}}" class="card-img-top" alt="{{name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{name}}</h5>
+          <p class="card-text">{{address}}</p>
+          <p class="card-text">{{description}}</p>
+          <a class="card-link" href="url">{{website}}</a>
+          <p class="card-text">{{topic}}</p>
+          <p class="card-text">{{medium}}</p>
+          <p class="card-text">{{offer}}</p>
+          <a href="/spaces/{{id}}/edit" class="btn btn-primary">Edit</a>
+          <a href="/spaces/{{id}}/contact" class="btn btn-primary">Contact the gallery</a>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <p>There are no art spaces yet!</p>
+  {{/each}}
+  <hr />
+</div>
+
+</body>
+</html>

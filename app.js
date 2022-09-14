@@ -22,7 +22,7 @@ require("./config")(app);
 const capitalized = require("./utils/capitalized");
 const projectName = "MiMa-app";
 
-app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
+app.locals.appTitle = `${capitalized(projectName)}`;
 
 // 👇 Start handling routes here
 const index = require("./routes/index.routes");
@@ -30,6 +30,12 @@ app.use("/", index);
 
 const authRouter = require('./routes/auth.routes'); 
 app.use('/', authRouter);
+
+const spaceRouter = require('./routes/space.routes'); 
+app.use('/', spaceRouter);
+
+const eventRouter = require('./routes/event.routes'); 
+app.use('/', eventRouter);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
