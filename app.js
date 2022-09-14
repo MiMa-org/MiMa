@@ -34,6 +34,9 @@ app.use('/', authRouter);
 const spaceRouter = require('./routes/space.routes'); 
 app.use('/', spaceRouter);
 
+const eventRouter = require('./routes/event.routes'); 
+app.use('/', eventRouter);
+
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
 
