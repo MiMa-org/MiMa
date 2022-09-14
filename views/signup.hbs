@@ -1,0 +1,30 @@
+<div class="form-landing">
+<div class="form-container-signup">
+  <form action="/signup" method="POST">
+    
+    <label for="email">E-Mail</label>
+    <input type="text" name="email" placeholder="E-Mail" required>
+
+    <label for="firstname">First name:</label>
+    <input type="text" name="firstName" placeholder="First name" required>
+
+    <label for="lastname">Last name:</label>
+    <input type="text" placeholder="Last name" name="lastName" required>
+
+    <label for="password">Password:</label>
+    <input type="password" placeholder="Password" id="password" name="password" required>
+    <input type="password" placeholder="Confirm Password" id="confirm_password" name="checkPassword" required>
+
+    <button type="submit" class="btn-submit">Sign up</button>
+    {{#if errorMessage}}
+    <p>{{errorMessage}}</p>
+    {{/if}}
+  </form>
+</div>
+
+<div class="form-bg">
+  <img class="signup-bg" src="/images/door-photo.jpg">
+    
+</div>
+</div>
+
