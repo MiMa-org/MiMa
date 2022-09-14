@@ -14,6 +14,8 @@ router.get('/events', (req, res) => {
       .catch(err => console.log(`Error while getting the events from the DB: ${err}`));
   });
 
+
+
   // GET route for editing a space
   router.get('/events/:id/edit', (req, res) => {
     const { id } = req.params;

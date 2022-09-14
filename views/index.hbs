@@ -26,5 +26,34 @@
     <p class="intro">Discover and connect with artists, galleries, and other art professionals</p>
 </div>
 
+<div class="section 2">
+  <p>Super interesting description of the amazing app.</p>
+</div>
+
+<div class="section3">
+<h1>Discover the events near you</h1>
+<hr>
+<div class="row">
+  {{#each events}}
+    <div class="col-md-4 mb-5">
+      <div class="card" style="width: 18rem;">
+        <img src="{{imageUrl}}" class="card-img-top" alt="{{name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">{{address}}</p>
+          <p class="card-text">{{description}}</p>
+          <p class="card-text">{{artists}}</p>
+          <p class="card-text">{{topic}}</p>
+          <p class="card-text">{{medium}}</p>
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <p>There are no events yet!</p>
+  {{/each}}
+  <hr />
+</div>
+</div>
+
 </body>
 </html>

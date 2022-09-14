@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
 
-const spaceSchema = new Schema(
+const venueSchema = new Schema(
   {
     name: String,
     address: String,
@@ -17,4 +17,4 @@ const spaceSchema = new Schema(
   }
 );
 
-module.exports = model('Space', spaceSchema);
+module.exports = model('Venue', venueSchema);
