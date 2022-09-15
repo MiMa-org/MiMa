@@ -8,30 +8,44 @@
     <title>Art events</title>
 </head>
 <body>
-    
-<h1>All the events</h1>
-<hr>
-<div class="row">
+
+  <div class="container">
+    <a href="/"><img src="/images/MiMA-gif.gif" class="logo"></a>
+    <nav class="navbar">
+          <a href="/signup">Join</a>
+          <a href="/login">Login</a>
+    </nav>
+  </div>
+
+<h1 class="page-title">All the events</h1>
+
+<div class="section-pages">
+
+<div class="row2">
   {{#each events}}
-    <div class="col-md-4 mb-5">
-      <div class="card" style="width: 18rem;">
+
+    <div class="gallery-scroll"> 
+      <figure class="gallery-item">
         <img src="{{imageUrl}}" class="card-img-top" alt="{{name}}">
-        <div class="card-body">
+          <figcaption>
           <h5 class="card-title">{{title}}</h5>
           <p class="card-text">{{address}}</p>
           <p class="card-text">{{description}}</p>
           <p class="card-text">{{artists}}</p>
           <p class="card-text">{{topic}}</p>
           <p class="card-text">{{medium}}</p>
-          <a href="/events/{{id}}/edit" class="btn btn-primary">Edit</a>
-        </div>
+          <a href="/events/{{id}}/edit" class="edit-btn">Edit</a>
+          </figcaption>
+          </figure>
       </div>
-    </div>
+      
+    
   {{else}}
     <p>There are no events yet!</p>
   {{/each}}
-  <hr />
+  </div>
 </div>
+
 
 </body>
 </html>
