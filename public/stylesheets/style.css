@@ -53,6 +53,64 @@ a {
   align-items: center; 
 }
 
+.section1-signup {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1602615008471-4fe8ffed22a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2899&q=80);
+  background-size: cover;
+  background-position: center;
+  filter: brightness();
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.section1-login {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1602615008780-dd606777215a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3648&q=80);
+  background-size: cover;
+  background-position: center;
+  filter: brightness();
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.section1-select {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1635098996168-c1b455ce7b60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2400&q=80);
+  background-size: cover;
+  background-position: center;
+  filter: brightness();
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+
+.row-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-edit {
+  padding-left: 70px;
+  height: 900px;
+}
+
+.h2-edit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
 .section2 {
   display: flex;
   flex-direction: column;
@@ -189,19 +247,18 @@ a {
 
 .create-qst {
   margin-bottom: 30px;
+  background-color: #9f9e99;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-h2 {
-  padding-bottom: 0px;
-  padding-top: 50px;
-}
 
 form input {
   position: relative;
   margin-bottom: 40px;
   border: none;
   appearance: none;
-  background: #B5B5B5;
+  background: #d5d4d4;
   padding: 10px 10px;
   border-radius: 5px;
   outline: none;
@@ -214,17 +271,20 @@ form input {
   margin-bottom: 5px;
   border: none;
   appearance: none;
-  background: #B5B5B5;
+  background: #d5d4d4;
   padding: 0px 0px;
   border-radius: 5px;
   outline: none;
   width: 300px;
-  height: 40px;
+  font-family: 'Poppins';
   font-size: 13px;
+  padding-left: 5px;
+  padding-top: 5px;
  } 
 
  select#role {
   color: #6d6c65;
+  background-color: #d5d4d4;
   font-size: 12px;
  }
 
@@ -242,16 +302,7 @@ form {
   width: 300px;
   padding: 20px 20px 10px 20px;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255, 0.2) ;
-}
-
-div#form {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1628819324029-f02ffd520907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3174&q=80);
-  background-size: cover;
-  background-position: center;
-  filter: brightness();
-  height: 80vh;
-  width: 100vw;
+  background-color: rgb(255, 255, 255, 0.4) ;
 }
 
 form select {
@@ -318,20 +369,22 @@ form button:hover {
 #form h2 {
   display: flex;
   justify-content: center;
+  padding-bottom: 0px;
+  padding-top: 50px;
 }
 
 input[type="file"]::file-selector-button {
   border: none;
   padding: 0.2em 0.4em;
   border-radius: 0.2em;
-  background-color: #9f9e99;
+  background-color: #c1c0bd;
   color: #6d6c65;
   transition: 1s;
 }
 
 input[type="file"]::file-selector-button:hover {
   background-color: #c8c8c7;
-  border: 2px solid #9f9e99;
+  border: 2px solid #c5c4c2;
 }
 
 
@@ -352,7 +405,7 @@ input[type="file"]::file-selector-button:hover {
   text-transform: uppercase;
   transition: 0.3s ease;
   width: 100%;
-
+  margin-bottom: 10px;
 }
  
 .btn-select:hover {
