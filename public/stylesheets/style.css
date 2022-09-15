@@ -45,7 +45,7 @@ a {
   background-size: cover;
   background-position: center;
   filter: brightness();
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -219,6 +219,7 @@ form input {
   border-radius: 5px;
   outline: none;
   width: 300px;
+  height: 40px;
   font-size: 13px;
  } 
 
