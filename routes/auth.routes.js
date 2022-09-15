@@ -13,10 +13,11 @@ router.get('/signup', (req, res) => res.render('auth/signup'));
 router.get('/login', (req, res) => res.render('auth/login'));
 router.get('/select', (req, res) => res.render('auth/select'));
  
-//               LOGIN
+//-----------------------              LOGIN      -----------------------------------
 
 // POST login route ==> to process form data
 router.post('/login', (req, res, next) => {
+    console.log('SESSION =====> ', req.session);
     const { email, password } = req.body;
    
     if (email === '' || password === '') {
@@ -33,7 +34,15 @@ router.post('/login', (req, res, next) => {
           return;
         } else if (bcryptjs.compareSync(password, user.passwordHash)) {
         //   res.render('users/user-profile', { user });
-        res.render('index', {user});
+        //res.render('index', {user});
+        
+        req.session.currentUser = user;
+        res.render('index', { userInSession: req.session.currentUser });
+
+        //req.session.currentUser = user;
+        //res.redirect('/index');
+
+
         } else {
           res.render('auth/login', { errorMessage: 'Incorrect password.' });
         }
@@ -42,7 +51,7 @@ router.post('/login', (req, res, next) => {
   });
  
 
-//              SIGN UP
+//-----------------              SIGN UP           ---------------------------------
 
 // POST signup route ==> to process form data
 router.post('/signup', (req, res, next) => {
