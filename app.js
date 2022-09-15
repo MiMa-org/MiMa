@@ -31,8 +31,8 @@ app.use("/", index);
 const authRouter = require('./routes/auth.routes'); 
 app.use('/', authRouter);
 
-const spaceRouter = require('./routes/space.routes'); 
-app.use('/', spaceRouter);
+const venueRouter = require('./routes/venue.routes'); 
+app.use('/', venueRouter);
 
 const eventRouter = require('./routes/event.routes'); 
 app.use('/', eventRouter);

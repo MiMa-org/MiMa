@@ -120,3 +120,14 @@ ul li {
 .title {
   font-size: 90px;
 }
+
+.form-container-signup {
+  width: 35%;
+  margin: 0 auto;
+  background-color: rgba(77, 170, 179, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  box-sizing: border-box;
+}
