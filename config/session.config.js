@@ -29,7 +29,7 @@ module.exports = app => {
       },
 
       store: MongoStore.create({
-        mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost:27017/findyouaroommasterPORT=3000'
+        mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost:27017//MiMa-app'
     })
   })
   );

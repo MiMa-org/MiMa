@@ -12,13 +12,16 @@
   <div class="container">
     <a href="/"><img src="/images/MiMA-gif.gif" class="logo"></a>
     <nav class="navbar">
+        
+          {{#if userInSession}}
+          <a class="btn-select" href="/select">Create a profile</a>
+          {{/if}}
+
+  
           <a href="/signup">Join</a>
           <a href="/login">Login</a>
+        
 
-          {{#if userInSession}}
-          <a href="/select">Select</a>
-  
-         {{/if}}
 
          {{!-- {{#if user}} --}}
           {{!-- <a href="/select">Select</a> --}}
@@ -58,11 +61,11 @@
         <img src="{{imageUrl}}" class="card-img-top" alt="{{name}}">
           <figcaption>
           <h5 class="card-title">{{title}}</h5>
+          <p class="card-text">Participating artists: {{artists}}</p>
           <p class="card-text">{{address}}</p>
+          <p class="card-text">{{date}}</p>
           <p class="card-text">{{description}}</p>
-          <p class="card-text">{{artists}}</p>
-          <p class="card-text">{{topic}}</p>
-          <p class="card-text">{{medium}}</p>
+          <p class="card-text">Refreshments offer: {{refreshments}}</p>
           </figcaption>
           </figure>
       </div>

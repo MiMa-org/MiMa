@@ -320,5 +320,43 @@ form button:hover {
   justify-content: center;
 }
 
+input[type="file"]::file-selector-button {
+  border: none;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #9f9e99;
+  color: #6d6c65;
+  transition: 1s;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #c8c8c7;
+  border: 2px solid #9f9e99;
+}
 
 
+
+
+
+ 
+.btn-select {
+  background: #6d6c65;
+  border: 1px solid #6d6c65;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 5px 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  width: 100%;
+
+}
+ 
+.btn-select:hover {
+  background: #fff;
+  color: #6d6c65;
+  transition: 0.3s ease;
+}
