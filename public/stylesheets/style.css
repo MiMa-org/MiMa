@@ -271,3 +271,16 @@ ul li {
 #logout-form button {
   width: 120px;
 }
+
+
+.form-container-signup {
+  width: 35%;
+  margin: 0 auto;
+  background-color: rgba(77, 170, 179, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
