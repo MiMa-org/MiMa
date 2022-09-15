@@ -47,7 +47,7 @@ router.post('/login', (req, res, next) => {
 // POST signup route ==> to process form data
 router.post('/signup', (req, res, next) => {
   // console.log("The form data: ", req.body);
- 
+
   const { role, username, email, password } = req.body;
  
   bcryptjs
