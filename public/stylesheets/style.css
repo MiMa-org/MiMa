@@ -45,7 +45,7 @@ a {
   background-size: cover;
   background-position: center;
   filter: brightness();
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -170,22 +170,108 @@ a {
   border-radius: 5px;
 }
 
+.create-btn {
+  border: 1px solid rgb(198, 197, 197);
+  color: rgb(198, 197, 197);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 70px;
+  padding-right: 70px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
 
+.create-btn:hover {
+  background: #fff;
+  color: #6d6c65;
+  transition: 0.3s ease background;
+}
 
+.create-qst {
+  margin-bottom: 30px;
+}
 
+h2 {
+  padding-bottom: 0px;
+  padding-top: 50px;
+}
 
+form input {
+  position: relative;
+  margin-bottom: 40px;
+  border: none;
+  appearance: none;
+  background: #B5B5B5;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 150px;
+  font-size: 10px;
+ } 
 
+ form textarea {
+  position: relative;
+  margin-bottom: 5px;
+  border: none;
+  appearance: none;
+  background: #B5B5B5;
+  padding: 0px 0px;
+  border-radius: 5px;
+  outline: none;
+  width: 300px;
+  height: 40px;
+  font-size: 13px;
+ } 
+
+ select#role {
+  color: #6d6c65;
+  font-size: 12px;
+ }
+
+ form input:focus::placeholder {
+  color: transparent;
+ }
+
+ form input::placeholder {
+  color: #6d6c65;
+  transition: color 0.3s ease;
+ } 
  
 form {
   margin: 30px auto;
-  width: 380px;
+  width: 300px;
+  padding: 20px 20px 10px 20px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.2) ;
 }
+
+div#form {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://images.unsplash.com/photo-1628819324029-f02ffd520907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3174&q=80);
+  background-size: cover;
+  background-position: center;
+  filter: brightness();
+  height: 80vh;
+  width: 100vw;
+}
+
+form select {
+  position: relative;
+  margin-bottom: 40px;
+  border: none;
+  appearance: none;
+  background: #B5B5B5;
+  padding: 10px 10px;
+  border-radius: 5px;
+  outline: none;
+  width: 150px;
+  font-size: 10px;
+ } 
  
 form label {
-  color: #666;
-  display: inline-block;
-  margin-bottom: 10px;
-  text-align: center;
+  color: rgb(81, 80, 80);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   width: 100%;
 }
  
@@ -200,9 +286,9 @@ form button {
 }
  
 form button {
-  background: #43a3e6;
-  border: 1px solid #43a3e6;
-  border-radius: 4px;
+  background: #6d6c65;
+  border: 1px solid #6d6c65;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -210,14 +296,14 @@ form button {
   padding: 8px 16px;
   text-decoration: none;
   text-transform: uppercase;
-  transition: 0.3s ease background;
+  transition: 0.3s ease;
   width: 100%;
 }
  
 form button:hover {
   background: #fff;
-  color: #43a3e6;
-  transition: 0.3s ease background;
+  color: #6d6c65;
+  transition: 0.3s ease;
 }
  
 .error {
@@ -229,58 +315,10 @@ form button:hover {
   width: 100%;
 }
  
-ul {
-  height: 12px;
-  padding: 2px 0;
-  list-style-type: none;
-}
- 
-ul li {
-  line-height: 12px;
-}
- 
-#to-right {
-  padding: 1em;
-  float: right;
-}
- 
-#to-right span {
-  color: #43a3e6;
-  font-size: 1.5em;
-}
- 
 #form h2 {
   display: flex;
   justify-content: center;
 }
- 
-#to-left {
-  float: left;
-}
- 
-#to-left p a {
-  color: #000;
-  font-weight: bold;
-  font-size: 12px;
-}
- 
-#logout-form {
-  display: inline;
-}
- 
-#logout-form button {
-  width: 120px;
-}
 
 
-.form-container-signup {
-  width: 35%;
-  margin: 0 auto;
-  background-color: rgba(77, 170, 179, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem;
-  box-sizing: border-box;
-}
 
