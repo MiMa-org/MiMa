@@ -71,20 +71,19 @@ a {
   margin-left: 0px;
 }
 
-/* rgb(202, 206, 206) */
 
-.gallery-scroll {
+
+.row {
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: row;
-  align-items: baseline;
   margin: 0;
   padding: 0;
-  background-color: burlywood;
+  padding-left: 100px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overflow-x: scroll;
 }
+
 
 .gallery-item {
   padding: 10px;
@@ -93,6 +92,8 @@ a {
   scroll-snap-align: center;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 50px;
+  margin-right: 0px;
 }
 
 .card-img-top {
@@ -104,7 +105,7 @@ a {
 }
 
 .home-events {
-  margin-left: 100px;
+  margin-left: 140px;
   padding-top: 30px;
   font-size: 23px;
 }
