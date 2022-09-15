@@ -10,7 +10,7 @@
 <body>
 
   <div class="container">
-    <img src="/images/MiMA-gif.gif" class="logo">
+    <a href="/"><img src="/images/MiMA-gif.gif" class="logo"></a>
     <nav class="navbar">
           <a href="/signup">Join</a>
           <a href="/login">Login</a>
@@ -29,7 +29,11 @@
 
 
 <div class="section3">
-<h1 class="home-events">Newest events</h1>
+<div class="section3-discover">
+  <h1 class="home-events">Newest events</h1>
+<a href="/events"><p class="events-link">Discover more →</p></a>
+</div>
+
 <div class="row">
   {{#each events}}
 
