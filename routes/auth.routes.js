@@ -48,13 +48,14 @@ router.post('/login', (req, res, next) => {
 router.post('/signup', (req, res, next) => {
   // console.log("The form data: ", req.body);
  
-  const { username, email, password } = req.body;
+  const { role, username, email, password } = req.body;
  
   bcryptjs
   .genSalt(saltRounds)
   .then(salt => bcryptjs.hash(password, salt))
   .then(hashedPassword => {
     return User.create({
+      role,  
       // username: username
       username,
       email,
@@ -66,7 +67,9 @@ router.post('/signup', (req, res, next) => {
   })
   .then(userFromDB => {
     // console.log('Newly created user is: ', userFromDB);
-    res.redirect('/userProfile');
+    // res.redirect('/userProfile');
+    res.redirect('/');
+
    
 
   })
@@ -74,7 +77,7 @@ router.post('/signup', (req, res, next) => {
 });
 
 // per adesso l'utente registrato va solo a userProfile, pagina di prova
-router.get('/userProfile', (req, res) => res.render('users/user-profile'));
+//router.get('/index', (req, res) => res.redirect('index'));
 
 
  

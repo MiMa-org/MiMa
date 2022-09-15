@@ -2,6 +2,11 @@ const { Schema, model } = require('mongoose');
  
 const userSchema = new Schema(
   {
+    role: {
+      type: String,
+      trim: true,
+      required: [true, 'Role is required.'],
+    },
     username: {
       type: String,
       trim: true,

@@ -13,13 +13,13 @@
   <h2>Signup</h2>
   <form action="/signup" method="POST">
  
-    {{!-- <label> --}}
-       {{!-- Choose an option: --}}
-       {{!-- <select id="user-type" name="user-type"> --}}
-        {{!-- <option value="artist">Artist</option> --}}
-        {{!-- <option value="art-space">Art Space</option> --}}
-       {{!-- </select>  --}}
-    {{!-- </label> --}}
+    <label>
+       Choose an option:
+       <select id="role" name="role">
+        <option value="artist">Artist</option>
+        <option value="art-space">Art Space</option>
+       </select> 
+    </label>
 
     <label> Username
       <input type="text" name="username" placeholder="username" />
