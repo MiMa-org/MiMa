@@ -9,15 +9,24 @@
 </head>
 <body>
 
-    <div id="form">
+  <div class="container">
+    <a href="/"><img src="/images/MiMA-gif.gif" class="logo"></a>
+    <nav class="navbar">
+          <a href="/signup">Join</a>
+          <a href="/login">Login</a>
+    </nav>
+  </div>
+
+  <div class="section1">
+  <div id="form">
   <h2>Signup</h2>
   <form action="/signup" method="POST">
  
     <label>
        Choose an option:
        <select id="role" name="role">
-        <option value="artist">Artist</option>
-        <option value="art-space">Art Space</option>
+        <option id="selection" value="artist">Artist</option>
+        <option id="selection" value="art-space">Art Space</option>
        </select> 
     </label>
 
@@ -40,6 +49,7 @@
     <button type="submit">Create account</button>
  
   </form>
+</div>
 </div>
 </body>
 </html>
