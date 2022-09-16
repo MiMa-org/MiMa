@@ -37,7 +37,8 @@ router.post('/login', (req, res, next) => {
         //res.render('index', {user});
         
         req.session.currentUser = user;
-        res.render('index', { userInSession: req.session.currentUser });
+        
+        res.render('index',{userInSession: req.session.currentUser});
 
         //req.session.currentUser = user;
         //res.redirect('/index');
@@ -55,7 +56,7 @@ router.post('/login', (req, res, next) => {
 
 // POST signup route ==> to process form data
 router.post('/signup', (req, res, next) => {
-  // console.log("The form data: ", req.body);
+   console.log("The form data: ", req.body);
 
   const { role, username, email, password } = req.body;
  
@@ -75,7 +76,7 @@ router.post('/signup', (req, res, next) => {
     });
   })
   .then(userFromDB => {
-    // console.log('Newly created user is: ', userFromDB);
+     console.log('Newly created user is: ', userFromDB);
     // res.redirect('/userProfile');
     res.redirect('/');
 
@@ -84,6 +85,14 @@ router.post('/signup', (req, res, next) => {
   })
   .catch(error => next(error));
 });
+
+
+router.post('/logout', (req, res, next) => {
+    req.session.destroy(err => {
+      if (err) next(err);
+      res.redirect('/');
+    });
+  });
 
 // per adesso l'utente registrato va solo a userProfile, pagina di prova
 //router.get('/index', (req, res) => res.redirect('index'));

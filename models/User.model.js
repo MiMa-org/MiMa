@@ -4,19 +4,19 @@ const userSchema = new Schema(
   {
     role: {
       type: String,
-      trim: true,
-      required: [true, 'Role is required.'],
+      //trim: true,
+      //required: [true, 'Role is required.'],
     },
     username: {
       type: String,
       trim: true,
       required: [true, 'Username is required.'],
-      unique: true
+      //unique: true
     },
     email: {
       type: String,
       required: [true, 'Email is required.'],
-      unique: true,
+      // unique: true,
       lowercase: true,
       trim: true
     },

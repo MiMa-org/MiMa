@@ -320,5 +320,7 @@ form button:hover {
   justify-content: center;
 }
 
+form :not(#logout-form)
+
 
 

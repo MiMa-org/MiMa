@@ -11,6 +11,42 @@
 
    <body>
 
+      <div class="container">
+    <a href="/"><img src="/images/MiMA-gif.gif" class="logo"></a>
+    <nav class="navbar">
+          {{!-- <a href="/signup">Join</a> --}}
+          {{!-- <a href="/login">Login</a> --}}
+
+          {{#if userInSession}}
+            
+            {{!-- <a href="/select">Select</a> --}}
+            <a href="../events">Events</a>
+            <a href="../venues">Venues</a>
+
+            <form action="/logout" method="POST">
+               <button>Logout</button>
+            </form>
+
+            {{else}}
+            <a href="/signup">Join</a>
+            <a href="/login">Login</a>
+               
+          {{/if}}
+
+         {{!-- {{#if user}} --}}
+          {{!-- <a href="/select">Select</a> --}}
+  {{!--  --}}
+         {{!-- {{/if}} --}}
+
+          
+
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+
       {{{body}}}
 
       <script src="/js/script.js"></script>

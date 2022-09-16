@@ -4,12 +4,12 @@ const Venue = require('../models/Venue.model');
 const fileUploader = require('../config/cloudinary.config');
 
 // GET route to display the form to create a new space
-router.get('/venues/create', (req, res) => res.render('venues/newVenue'));
+router.get('/venues/create', (req, res) => res.render('venues/newVenue',{userInSession: req.session.currentUser }));
 
 router.get('/venues', (req, res) => {
     Venue.find()
       .then(venuesFromDB => {
-        res.render('venues/venues.hbs', { venues: venuesFromDB });
+        res.render('venues/venues.hbs', { venues: venuesFromDB, userInSession: req.session.currentUser });
       })
       .catch(err => console.log(`Error while getting the venues from the DB: ${err}`));
   });
@@ -19,7 +19,7 @@ router.get('/venues', (req, res) => {
     const { id } = req.params;
    
     Venue.findById(id)
-      .then(venueToEdit => res.render('venues/venue-edit', venueToEdit))
+      .then(venueToEdit => res.render('venues/venue-edit', {userInSession: req.session.currentUser }, venueToEdit))
       .catch(error => console.log(`Error while getting a single venue for edit: ${error}`));
   });
 
@@ -29,7 +29,7 @@ router.post('/venues/create', fileUploader.single('venue-image'), (req, res) => 
    
     Venue.create({ name, address, description, website, topic, medium, offer, imageUrl: req.file.path })
       .then(newlyCreatedVenueFromDB => {
-        res.redirect('/venues');
+        res.redirect('/venues', );
       })
       .catch(error => console.log(`Error while creating a new venue: ${error}`));
   });
