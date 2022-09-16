@@ -9,19 +9,13 @@
 </head>
 <body>
 
-<div class="container">
-     <a href="/"><img src="/images/MiMA-gif.gif" class="logo"></a>
-    <nav class="navbar">
-          <a href="/events">Events</a>
-          <a href="/venues">Venues</a>
-    </nav>
-  </div>
+
     
 <div class="section1-edit">     
 <h2 class="h2-edit">Update your event</h2>
 <div class="row-edit">
   <div class="col-md-6">
-    <form action="/events/{{_id}}/edit" method="post" enctype="multipart/form-data">
+    <form class="form-classic" action="/events/{{_id}}/edit" method="post" enctype="multipart/form-data">
       <div class="form-group">
         <label>Title:
           <input type="text" name="title" class="form-control" value="{{title}}" />

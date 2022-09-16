@@ -9,8 +9,8 @@ body {
 .logo {
   width: 120px;
   padding-left: 30px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
 a {
@@ -26,13 +26,14 @@ a {
   flex-direction: row;
   justify-content: flex-end;
   text-align: right;
+  align-items: baseline;
   padding: 10px;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -297,7 +298,7 @@ form input {
   transition: color 0.3s ease;
  } 
  
-form {
+.form-classic {
   margin: 30px auto;
   width: 300px;
   padding: 20px 20px 10px 20px;
@@ -402,16 +403,50 @@ form :not(#logout-form)
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
-  padding: 5px 16px;
   text-decoration: none;
   text-transform: uppercase;
   transition: 0.3s ease;
   width: 100%;
-  margin-bottom: 10px;
 }
  
 .btn-select:hover {
   background: #fff;
   color: #6d6c65;
   transition: 0.3s ease;
+}
+
+.navbar-btn {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.log-btn {
+  margin-bottom: 0px;
+}
+
+
+.create-new-btn {
+  border: 1px solid rgb(198, 197, 197);
+  color: rgb(132, 130, 130);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 30px;
+  margin-top: 43px;
+  margin-left: 25px;
+  border-radius: 5px;
+}
+
+.create-new-btn:hover {
+  background: #fff;
+  color: #6d6c65;
+  transition: 0.3s ease background;
+}
+
+.page-title-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
 }
