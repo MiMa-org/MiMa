@@ -5,10 +5,10 @@ const eventSchema = new Schema(
   {
     title: String,
     address: String,
+    date: String,
     description: String,
     artists: String,
-    topic: String,
-    medium: String,
+    refreshments: String,
     imageUrl: String
     // host: {
 	// 	type: Schema.Types.ObjectId,

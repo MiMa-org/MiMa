@@ -27,9 +27,9 @@ router.get('/events', (req, res) => {
 
 // POST
 router.post('/events/create', fileUploader.single('event-image'), (req, res) => {
-    const { title, address, description, artists, topic, medium } = req.body;
+    const { title, address, date, description, artists, refreshments } = req.body;
    
-    Event.create({ title, address, description, artists, topic, medium, imageUrl: req.file.path })
+    Event.create({ title, address, date, description, artists, refreshments, imageUrl: req.file.path })
       .then(newlyCreatedEventFromDB => {
         res.redirect('/events');
       })
@@ -39,7 +39,7 @@ router.post('/events/create', fileUploader.single('event-image'), (req, res) => 
 // POST route to save changes after updates in a specific space
 router.post('/events/:id/edit', fileUploader.single('event-image'), (req, res) => {
     const { id } = req.params;
-    const { title, address, description, artists, topic, medium, existingImage } = req.body;
+    const { title, address, date, description, artists, refreshments, existingImage } = req.body;
    
     let imageUrl;
     if (req.file) {
@@ -48,7 +48,7 @@ router.post('/events/:id/edit', fileUploader.single('event-image'), (req, res) =
       imageUrl = existingImage;
     }
    
-    Event.findByIdAndUpdate(id, { title, address, description, artists, topic, medium, imageUrl }, { new: true })
+    Event.findByIdAndUpdate(id, { title, address, date, description, artists, refreshments, imageUrl }, { new: true })
       .then(() => res.redirect(`/events`))
       .catch(error => console.log(`Error while updating a single event: ${error}`));
   });
