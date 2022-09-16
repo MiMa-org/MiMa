@@ -4,7 +4,7 @@ const Event = require('../models/Event.model');
 const fileUploader = require('../config/cloudinary.config');
 
 // GET route to display the form to create a new space
-router.get('/events/create', (req, res) => res.render('events/newEvent'));
+router.get('/events/create', (req, res) => res.render('events/newEvent',{userInSession: req.session.currentUser}));
 
 router.get('/events', (req, res) => {
     Event.find()
@@ -21,7 +21,7 @@ router.get('/events', (req, res) => {
     const { id } = req.params;
    
     Event.findById(id)
-      .then(eventToEdit => res.render('events/event-edit', eventToEdit))
+      .then(eventToEdit => res.render('events/event-edit', {userInSession: req.session.currentUser}))
       .catch(error => console.log(`Error while getting a single event for edit: ${error}`));
   });
 
